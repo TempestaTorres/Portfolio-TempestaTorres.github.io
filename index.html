@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/styles.css">
+    <link rel="stylesheet" href="dist/css/responsive.component.css">
+    <script src="./scripts/form.validate.js"></script>
+    <script src="./scripts/scrollApi.js"></script>
+    <script src="./scripts/app.js"></script>
+</head>
+<body class="text-zinc-900 bg-zinc dark">
+<div class="flex flex-col min-h-screen">
+    <header class="header dark bg-transparent fixed w-full z-50 top-0 transition-all duration-300 py-6">
+        <div class="container flex items-center space-between">
+            <a href="#" class="logo font-bold text-xl tracking-tight transition">DevPortfolio</a>
+            <!--  Navigation -->
+            <nav class="navbar">
+                <ul class="nav-links flex items-center gap-6">
+                    <li class="link-item"><a class="transition" href="#home">Home</a></li>
+                    <li class="link-item"><a class="transition" href="#about">About</a></li>
+                    <li class="link-item"><a class="transition" href="#skills">Skills</a></li>
+                    <li class="link-item"><a class="transition" href="#projects">Projects</a></li>
+                    <li class="link-item"><a class="transition" href="#contact">Contact</a></li>
+                    <li class="link-item-group">
+                        <button class="d-none rounded-md items-center justify-center h-9 w-9 transition white"
+                                aria-label="switch to dark mode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-moon h-5 w-5 transition">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </svg>
+                        </button>
+                        <button class="rounded-md inline-flex items-center justify-center h-9 w-9 transition dark"
+                                aria-label="switch to light mode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-sun h-5 w-5">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2"></path>
+                                <path d="M12 20v2"></path>
+                                <path d="m4.93 4.93 1.41 1.41"></path>
+                                <path d="m17.66 17.66 1.41 1.41"></path>
+                                <path d="M2 12h2"></path>
+                                <path d="M20 12h2"></path>
+                                <path d="m6.34 17.66-1.41 1.41"></path>
+                                <path d="m19.07 4.93-1.41 1.41"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--   Section Home     -->
+        <section id="home" class="hero container relative min-h-screen pt-16">
+            <div class="absolute bg-radial nz-10 inset-0"></div>
+            <div class="hero-content">
+                <div class="hero-frame flex items-center gap-8">
+                    <div class="hero-main w-md space-y-6">
+                        <!--       Info        -->
+                        <div class="space-y-2">
+                            <h2 class="hello text-md font-semibold">Hello, I am</h2>
+                            <h1 class="title h-xl font-bold tracking-tight">Dmitri Andrijenko</h1>
+                            <div class="h-12">
+                                <p class="text-2xl font-medium">Frontend developer</p>
+                            </div>
+                            <p class="subtitle pt-1 text-lg text-muted-foreground max-w-xl dark">
+                                I build accessible, responsive, and performant web applications that deliver exceptional
+                                user experiences.
+                            </p>
+                        </div>
+                        <!--      Buttons      -->
+                        <div class="hero-buttons">
+                            <div class="buttons-group flex gap-4 pt-4">
+                                <a href="#projects"
+                                   class="z-10 btn group dark bg-primary h-10 transition-colors font-medium text-sm px-8 inline-flex items-center justify-center gap-2 rounded-md shadow text-primary-foreground">
+                                    View my work
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-arrow-right ml-2 size-4 transition-transform translate-x-1">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                                <a href="#download"
+                                   class="button z-10 dark text-accent-foreground border border-input bg-background shadow-sm transition-colors font-medium text-sm inline-flex items-center justify-center h-10 rounded-md px-8">
+                                    Download Resume
+                                </a>
+                            </div>
+                        </div>
+                        <!--    Social links   -->
+                        <div class="hero-social-links">
+                            <div class="social-links flex items-center gap-4 pt-6">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                   class="z-10 dark text-primary transition" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round" class="lucide lucide-github h-5 w-5">
+                                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                        <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                    </svg>
+                                    <span class="sr-only">GitHub</span></a>
+                                <!--   LinkedIn -->
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                   class="z-10 text-primary transition" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect width="4" height="12" x="2" y="9"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                    <span class="sr-only">LinkedIn</span></a>
+                                <!--  Twitter  -->
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                                   class="z-10 text-primary transition" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5">
+                                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                                    </svg>
+                                    <span class="sr-only">Twitter</span></a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                                   class="z-10 text-primary transition" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                         class="bi bi-facebook h-5 w-5" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                    </svg>
+                                    <span class="sr-only">Facebook</span></a>
+                                <!--   Instagram  -->
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                   class="z-10 text-primary transition" tabindex="0">
+                                    <svg class="h-5 w-5" id="instagram" fill="currentColor" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         x="0px" y="0px" width="24" height="24"
+                                         viewBox="0 0 169.063 169.063"
+                                         xml:space="preserve">
+                                    <g>
+                                    <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                                                          c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+                                                          c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+                                                          c17.455,0,31.656,14.201,31.656,31.655V122.407z"/>
+                                        <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                                                          C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+                                                          c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"/>
+                                        <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                                                          c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+                                                          C135.661,29.421,132.821,28.251,129.921,28.251z"/>
+                                    </g>
+                                    </svg>
+                                    <span class="sr-only">Instagram</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    My Photo        -->
+                    <div class="photo w-md-2 flex justify-center">
+                        <div class="dev-img relative w-80 h-80">
+                            <div class="absolute dark inset-0 rounded-full bg-gradient-to-br blur-3xl"></div>
+                            <div class="relative dark bg-gradient-to-br w-full h-full overflow-hidden rounded-full border-primary-30 flex items-center justify-center">
+                                <div class="rounded-full wh-xxl dark bg-zinc-800 flex items-center justify-center">
+                                    <span class="text-muted-foreground text-lg">Developer photo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   Section About    -->
+        <section id="about" class="py-24 bg-zinc-900 dark">
+            <div class="container">
+                <div class="about-content flex flex-col items-center mb-12">
+                    <h2 class="fade-in text-primary text-xl font-semibold mb-2">About me</h2>
+                    <h3 class="fade-in text-4xl font-bold text-center">Know Me More</h3>
+                    <div class="separator mt-6 h-1 bg-primary"></div>
+                </div>
+                <!--  Grid More About -->
+                <div class="about-more grid grid-cols-2 gap-12 items-center">
+                    <div class="col-1">
+                        <h4 class="text-2xl font-bold mb-4">I'm <span class="text-primary">Dmitri Andrijenko</span>, a
+                            Web Developer</h4>
+                        <p class="dark text-muted-foreground mb-4">I help businesses and organizations bring their ideas to
+                            life through modern web development. With over 5 years of experience in creating responsive
+                            websites and web applications, I've developed a keen eye for detail and a commitment to
+                            excellence.
+                        </p>
+                        <p class="dark text-muted-foreground mb-6">My approach combines clean code, modern design principles,
+                            and a deep understanding of user experience. I believe that a successful website not only
+                            looks good but performs exceptionally and meets user needs.
+                        </p>
+                        <a href="#contact"
+                           class="btn group dark bg-primary h-9 transition-colors font-medium text-sm px-4 py-2 inline-flex items-center justify-center gap-2 rounded-md shadow text-primary-foreground">
+                            Contact me
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 class="lucide lucide-arrow-right ml-2 size-4 transition-transform translate-x-1">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <div class="dark card-info bg-zinc-800 border-zinc-700 dark p-6 rounded-lg border box-shadow transition">
+                            <h4 class="text-xl font-bold mb-6">Personal Information</h4>
+                            <div class="space-y-4 group-info overflow-hidden">
+                                <!--   Location  -->
+                                <div class="flex slide-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-map-pin h-5 w-5 text-primary mt-0-5 mr-3">
+                                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium">Location:</h5>
+                                        <p class="dark text-muted-foreground">Estonia, TLN</p>
+                                    </div>
+                                </div>
+                                <!--     E-mail   -->
+                                <div class="flex slide-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-mail h-5 w-5 text-primary mt-0-5 mr-3">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium">Email:</h5>
+                                        <p class="dark text-muted-foreground">dandrijenko@gmail.com</p>
+                                    </div>
+                                </div>
+                                <!--     Phone   -->
+                                <div class="flex slide-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-phone h-5 w-5 text-primary mt-0-5 mr-3">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium">Phone:</h5>
+                                        <p class="dark text-muted-foreground">(+372)537-911-25</p>
+                                    </div>
+                                </div>
+                                <!--     Button download    -->
+                                <div id="download" class="control pt-2">
+                                    <button class="slide-up button dark border border-zinc-700 text-zinc-900 bg-background h-9 w-full font-medium text-sm px-4 py-2 inline-flex items-center justify-center gap-2 rounded-md box-shadow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="lucide lucide-cloud-download mr-2 size-4">
+                                            <path d="M12 13v8l-4-4"></path>
+                                            <path d="m12 21 4-4"></path>
+                                            <path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"></path>
+                                        </svg>
+                                        Download Resume
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--     Skills    -->
+        <section id="skills" class="py-24 dark bg-zinc-900">
+            <div class="container">
+                <!--   Skills Title   -->
+                <div class="skill-content flex flex-col items-center mb-12">
+                    <h2 class="fade-in text-primary text-xl font-semibold mb-2">My Skills</h2>
+                    <h3 class="fade-in text-4xl font-bold text-center">Skills & Technologies</h3>
+                    <div class="separator-2 mt-6 h-1 bg-primary"></div>
+                </div>
+                <!--    Sills Grid   -->
+                <div class="skill-grid grid grid-cols-2 gap-16">
+                    <div class="skill-col">
+                        <h4 class="text-2xl font-bold mb-6">Technical Skills</h4>
+                        <div class="space-y-6">
+                            <!--     HTML/CSS   -->
+                            <div class="space-y-2">
+                                <div class="flex space-between items-center">
+                                    <h5 class="font-medium">HTML/CSS</h5>
+                                    <span class="dark text-sm text-muted-foreground">95<!-- -->%</span>
+                                </div>
+                                <div class="dark relative w-full overflow-hidden bg-primary-20 rounded-full h-2"
+                                     aria-valuemax="100" aria-valuemin="0" role="progressbar" data-state="indeterminate"
+                                     data-nax="100">
+                                    <div class="translate-xr-5 h-full w-full bg-primary" data-state="indeterminate"
+                                         data-nax="100"></div>
+                                </div>
+                            </div>
+                            <!--     Javascript   -->
+                            <div class="space-y-2">
+                                <div class="flex space-between items-center">
+                                    <h5 class="font-medium">JavaScript</h5>
+                                    <span class="dark text-sm text-muted-foreground">90<!-- -->%</span>
+                                </div>
+                                <div class="dark relative w-full overflow-hidden bg-primary-20 rounded-full h-2"
+                                     aria-valuemax="100" aria-valuemin="0" role="progressbar" data-state="indeterminate"
+                                     data-nax="100">
+                                    <div class="translate-xr-10 h-full w-full bg-primary" data-state="indeterminate"
+                                         data-nax="100"></div>
+                                </div>
+                            </div>
+                            <!--     React JS   -->
+                            <div class="space-y-2">
+                                <div class="flex space-between items-center">
+                                    <h5 class="font-medium">React.js</h5>
+                                    <span class="dark text-sm text-muted-foreground">85<!-- -->%</span>
+                                </div>
+                                <div class="dark relative w-full overflow-hidden bg-primary-20 rounded-full h-2"
+                                     aria-valuemax="100" aria-valuemin="0" role="progressbar" data-state="indeterminate"
+                                     data-nax="100">
+                                    <div class="translate-xr-15 h-full w-full bg-primary" data-state="indeterminate"
+                                         data-nax="100"></div>
+                                </div>
+                            </div>
+                            <!--     Next JS   -->
+                            <div class="space-y-2">
+                                <div class="flex space-between items-center">
+                                    <h5 class="font-medium">Next.js</h5>
+                                    <span class="dark text-sm text-muted-foreground">80<!-- -->%</span>
+                                </div>
+                                <div class="dark relative w-full overflow-hidden bg-primary-20 rounded-full h-2"
+                                     aria-valuemax="100" aria-valuemin="0" role="progressbar" data-state="indeterminate"
+                                     data-nax="100">
+                                    <div class="translate-xr-20 h-full w-full bg-primary" data-state="indeterminate"
+                                         data-nax="100"></div>
+                                </div>
+                            </div>
+                            <!--     TypeScript   -->
+                            <div class="space-y-2">
+                                <div class="flex space-between items-center">
+                                    <h5 class="font-medium">TypeScript</h5>
+                                    <span class="dark text-sm text-muted-foreground">75<!-- -->%</span>
+                                </div>
+                                <div class="dark relative w-full overflow-hidden bg-primary-20 rounded-full h-2"
+                                     aria-valuemax="100" aria-valuemin="0" role="progressbar" data-state="indeterminate"
+                                     data-nax="100">
+                                    <div class="translate-xr-25 h-full w-full bg-primary" data-state="indeterminate"
+                                         data-nax="100"></div>
+                                </div>
+                            </div>
+                            <!--     Node.js   -->
+                            <div class="space-y-2">
+                                <div class="flex space-between items-center">
+                                    <h5 class="font-medium">Node.js</h5>
+                                    <span class="dark text-sm text-muted-foreground">70<!-- -->%</span>
+                                </div>
+                                <div class="dark relative w-full overflow-hidden bg-primary-20 rounded-full h-2"
+                                     aria-valuemax="100" aria-valuemin="0" role="progressbar" data-state="indeterminate"
+                                     data-nax="100">
+                                    <div class="translate-xr-30 h-full w-full bg-primary" data-state="indeterminate"
+                                         data-nax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stack-col">
+                        <h4 class="text-2xl font-bold mb-6">Tech Stack</h4>
+                        <div class="space-y-8">
+                            <!--   Frontend   -->
+                            <div class="frontend">
+                                <h5 class="text-lg font-semibold text-primary mb-3">Frontend</h5>
+                                <div class="frontend-grid grid grid-cols-3 gap-4">
+                                    <!--  React cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        React
+                                    </div>
+                                    <!--  Next cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Next.js
+                                    </div>
+                                    <!--  Vue cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Vue.js
+                                    </div>
+                                    <!--  JQuery cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        JQuery.js
+                                    </div>
+                                    <!--  Vue cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Tailwind CSS
+                                    </div>
+                                    <!--  Vue cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Angular
+                                    </div>
+                                </div>
+                            </div>
+                            <!--   Tools   -->
+                            <div class="tools">
+                                <h5 class="text-lg font-semibold text-primary mb-3">Tools</h5>
+                                <div class="tools-grid grid grid-cols-3 gap-4">
+                                    <!--  Git cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Git
+                                    </div>
+                                    <!--  Github cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Github
+                                    </div>
+                                    <!--  Vue cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        WebStorm
+                                    </div>
+                                    <!--  Figma cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Figma
+                                    </div>
+                                    <!--  Vue cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        PhotoShop
+                                    </div>
+                                    <!--  Vue cell -->
+                                    <div class="cell text-center px-4 py-3 border border-zinc-700 rounded dark bg-zinc-800 transition duration-1000">
+                                        Webpack
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--    Projects   -->
+        <section id="projects" class="py-24 dark bg-zinc-900">
+            <div class="container">
+                <!--   Projects Title   -->
+                <div class="projects-content flex flex-col items-center mb-12">
+                    <h2 class="fade-in text-primary text-xl font-semibold mb-2">My Work</h2>
+                    <h3 class="fade-in text-4xl font-bold text-center">Skills & Recent Projects</h3>
+                    <div class="separator-3 mt-6 h-1 bg-primary"></div>
+                </div>
+                <!--   Project Cards Grid   -->
+                <div class="projects-grid grid grid-cols-3 gap-6">
+                    <div class="card-container transition">
+                        <div class="card h-full flex flex-col dark border border-zinc-700 bg-card text-card-foreground shadow overflow-hidden rounded-xl">
+                            <div class="aspect-video dark w-full bg-zinc-800 relative overflow-hidden">
+                                <img class="img object-cover" src="./dist/img/hookah-bar.png" alt="Hookah barLanding"
+                                     loading="lazy">
+                                <!--   Pop up   -->
+                                <div class="pop-up transition flex items-center justify-center gap-4 z-10 absolute inset-0 bg-black-60 opacity-0">
+                                    <a href="https://tempestatorres.github.io/Hookah-Landing.github.io/" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-external-link size-4 mr-2">
+                                                <path d="M15 3h6v6"></path>
+                                                <path d="M10 14 21 3"></path>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-github size-4 mr-2">
+                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body flex flex-col p-6 space-y-1-5">
+                                <div class="font-semibold leading-none tracking-tight">Hookah bar Responsive Website</div>
+                                <div class="dark text-sm text-muted-foreground line-clamp-2">
+                                    Full featured responsive one-page site with modern design and smooth animations.
+                                </div>
+                                <div class="card-footer flex items-center p-6 pt-0 mt-auto">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">HTML3</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">CSS</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">JQuery.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next card   -->
+                    <div class="card-container transition">
+                        <div class="card h-full flex flex-col dark border border-zinc-700 bg-card text-card-foreground shadow overflow-hidden rounded-xl">
+                            <div class="aspect-video dark w-full bg-zinc-800 relative overflow-hidden">
+                                <img class="img object-cover" src="./dist/img/Macaroon.png" alt="Landing Macaroon"
+                                     loading="lazy">
+                                <!--   Pop up   -->
+                                <div class="pop-up transition flex items-center justify-center gap-4 z-10 absolute inset-0 bg-black-60 opacity-0">
+                                    <a href="https://tempestatorres.github.io/Macaroons.github.io/#form" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-external-link size-4 mr-2">
+                                                <path d="M15 3h6v6"></path>
+                                                <path d="M10 14 21 3"></path>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-github size-4 mr-2">
+                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body flex flex-col p-6 space-y-1-5">
+                                <div class="font-semibold leading-none tracking-tight">E-Commercial Responsive Website</div>
+                                <div class="dark text-sm text-muted-foreground line-clamp-2">
+                                    E-Commercial platform with animations effects and client's order processing.
+                                </div>
+                                <div class="card-footer flex items-center p-6 pt-0 mt-auto">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">HTML3</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">CSS</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">JQuery.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next card   -->
+                    <div class="card-container transition">
+                        <div class="card h-full flex flex-col dark border border-zinc-700 bg-card text-card-foreground shadow overflow-hidden rounded-xl">
+                            <div class="aspect-video dark w-full bg-zinc-800 relative overflow-hidden">
+                                <img class="img object-cover" src="./dist/img/task-app-project.jpg" alt="Landing"
+                                     loading="lazy">
+                                <!--   Pop up   -->
+                                <div class="pop-up transition flex items-center justify-center gap-4 z-10 absolute inset-0 bg-black-60 opacity-0">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-external-link size-4 mr-2">
+                                                <path d="M15 3h6v6"></path>
+                                                <path d="M10 14 21 3"></path>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-github size-4 mr-2">
+                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body flex flex-col p-6 space-y-1-5">
+                                <div class="font-semibold leading-none tracking-tight">Task Management App</div>
+                                <div class="dark text-sm text-muted-foreground line-clamp-2">
+                                    Productivity application with drag-and-drop task organization and project
+                                    collaboration.
+                                </div>
+                                <div class="card-footer flex items-center p-6 pt-0 mt-auto">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">React</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Redux</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Node.js</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next card   -->
+                    <div class="card-container transition">
+                        <div class="card h-full flex flex-col dark border border-zinc-700 bg-card text-card-foreground shadow overflow-hidden rounded-xl">
+                            <div class="aspect-video dark w-full bg-zinc-800 relative overflow-hidden">
+                                <img class="img object-cover" src="./dist/img/weather-project.png" alt="Landing"
+                                     loading="lazy">
+                                <!--   Pop up   -->
+                                <div class="pop-up transition flex items-center justify-center gap-4 z-10 absolute inset-0 bg-black-60 opacity-0">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-external-link size-4 mr-2">
+                                                <path d="M15 3h6v6"></path>
+                                                <path d="M10 14 21 3"></path>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-github size-4 mr-2">
+                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body flex flex-col p-6 space-y-1-5">
+                                <div class="font-semibold leading-none tracking-tight">Weather Forecast App</div>
+                                <div class="dark text-sm text-muted-foreground line-clamp-2">
+                                    Real-time weather application with location detection and 7-day forecasts using
+                                    weather API.
+                                </div>
+                                <div class="card-footer flex items-center p-6 pt-0 mt-auto">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">JavaScript</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">HTML5</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">CSS3</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">OpenWeather API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next card   -->
+                    <div class="card-container transition">
+                        <div class="card h-full flex flex-col dark border border-zinc-700 bg-card text-card-foreground shadow overflow-hidden rounded-xl">
+                            <div class="aspect-video dark w-full bg-zinc-800 relative overflow-hidden">
+                                <img class="img object-cover" src="./dist/img/portfolio-project.png" alt="Landing"
+                                     loading="lazy">
+                                <!--   Pop up   -->
+                                <div class="pop-up transition flex items-center justify-center gap-4 z-10 absolute inset-0 bg-black-60 opacity-0">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-external-link size-4 mr-2">
+                                                <path d="M15 3h6v6"></path>
+                                                <path d="M10 14 21 3"></path>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-github size-4 mr-2">
+                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body flex flex-col p-6 space-y-1-5">
+                                <div class="font-semibold leading-none tracking-tight">Portfolio Website</div>
+                                <div class="dark text-sm text-muted-foreground line-clamp-2">
+                                    Custom responsive portfolio site with modern design and smooth animations.
+                                </div>
+                                <div class="card-footer flex items-center p-6 pt-0 mt-auto">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Next.js</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Tailwind CSS</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Framer Motion</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">TypeScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next card   -->
+                    <div class="card-container transition">
+                        <div class="card h-full flex flex-col dark border border-zinc-700 bg-card text-card-foreground shadow overflow-hidden rounded-xl">
+                            <div class="aspect-video dark w-full bg-zinc-800 relative overflow-hidden">
+                                <img class="img object-cover" src="./dist/img/portfolio-project.png" alt="Landing"
+                                     loading="lazy">
+                                <!--   Pop up   -->
+                                <div class="pop-up transition flex items-center justify-center gap-4 z-10 absolute inset-0 bg-black-60 opacity-0">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-external-link size-4 mr-2">
+                                                <path d="M15 3h6v6"></path>
+                                                <path d="M10 14 21 3"></path>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                        <button class="dark pop-up-btn inline-flex items-center justify-center gap-2 font-medium transition-all bg-secondary text-secondary-foreground shadow-sm h-8 px-3 text-xs rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-github size-4 mr-2">
+                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body flex flex-col p-6 space-y-1-5">
+                                <div class="font-semibold leading-none tracking-tight">Portfolio Website</div>
+                                <div class="dark text-sm text-muted-foreground line-clamp-2">
+                                    Custom responsive portfolio site with modern design and smooth animations.
+                                </div>
+                                <div class="card-footer flex items-center p-6 pt-0 mt-auto">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Next.js</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Tailwind CSS</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">Framer Motion</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-10 text-primary">TypeScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next card   -->
+                </div>
+                <!--   View more button   -->
+                <div class="flex justify-center mt-12">
+                    <button id="view-more"
+                            class="dark transition-colors bg-background font-medium text-sm inline-flex items-center justify-center h-10 px-8 rounded-md shadow-sm">
+                        View More
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--   Testimonials   -->
+        <section id="testimonials" class="py-24 dark bg-zinc-900 overflow-hidden">
+            <div class="container">
+                <!--   Testimonials Title   -->
+                <div class="testimonials-content flex flex-col items-center mb-12">
+                    <h2 class="fade-in text-primary text-xl font-semibold mb-2">Testimonials</h2>
+                    <h3 class="fade-in text-4xl font-bold text-center">What Clients Say</h3>
+                    <div class="separator-4 mt-6 h-1 bg-primary"></div>
+                </div>
+                <!--   Slider   -->
+                <div class="auto-slider max-w-3xl mx-auto relative">
+                    <!--   Next slide   -->
+                    <div class="slide transition-all-1000 absolute inset-0 opacity-0 translate-x-8">
+                        <div class="slide-card dark bg-zinc-800 text-card-foreground border border-zinc-700 rounded-xl shadow">
+                            <div class="p-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="dark lucide lucide-quote h-10 w-10 text-primary-25 mb-4">
+                                    <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+                                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+                                </svg>
+                                <p class="text-lg italic mb-6">"<!-- --> Dmitri brought our vision to life with
+                                    exceptional attention to detail. His technical expertise and commitment to quality
+                                    resulted in a website that exceeds our expectations.<!-- --> "
+                                </p>
+                                <div>
+                                    <p class="font-bold">Sarah Johnson</p>
+                                    <p class="dark text-sm text-muted-foreground">CEO, TechStart</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next slide   -->
+                    <div class="slide transition-all-1000 absolute inset-0 opacity-0 translate-x-8">
+                        <div class="slide-card dark bg-zinc-800 text-card-foreground border border-zinc-700 rounded-xl shadow">
+                            <div class="p-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="dark lucide lucide-quote h-10 w-10 text-primary-25 mb-4">
+                                    <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+                                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+                                </svg>
+                                <p class="text-lg italic mb-6">"<!-- --> Working with Dmitri was a game-changer for our
+                                    online presence. He created a responsive, fast-loading website that perfectly
+                                    represents our brand and has significantly improved our user engagement.<!-- --> "
+                                </p>
+                                <div>
+                                    <p class="font-bold">Michael Chen</p>
+                                    <p class="dark text-sm text-muted-foreground">Marketing Director, Innovate Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Next slide   -->
+                    <div class="slide transition-all-1000 absolute inset-0 opacity-0 translate-x-8">
+                        <div class="slide-card dark bg-zinc-800 text-card-foreground border border-zinc-700 rounded-xl shadow">
+                            <div class="p-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="dark lucide lucide-quote h-10 w-10 text-primary-25 mb-4">
+                                    <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+                                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+                                </svg>
+                                <p class="text-lg italic mb-6">"<!-- --> Dmitri's problem-solving skills and deep
+                                    understanding of web development helped us overcome complex challenges. The end
+                                    product is not only beautiful but also incredibly functional.<!-- --> "
+                                </p>
+                                <div>
+                                    <p class="font-bold">Emma Rodriguez</p>
+                                    <p class="dark text-sm text-muted-foreground">Product Manager, DesignHub</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  Slider buttons   -->
+                <div class="auto-slider-buttons flex justify-center mt-6 gap-2">
+                    <button class="slider-btn w-2-5 h-2-5 rounded-full transition-all-500 dark bg-zinc-600"
+                            aria-label="View testimonial 1"></button>
+                    <button class="slider-btn w-2-5 h-2-5 rounded-full transition-all-500 dark bg-zinc-600"
+                            aria-label="View testimonial 2"></button>
+                    <button class="slider-btn w-2-5 h-2-5 rounded-full transition-all-500 dark bg-zinc-600"
+                            aria-label="View testimonial 3"></button>
+                </div>
+            </div>
+        </section>
+        <!--   Contact   -->
+        <section id="contact" class="py-24 dark bg-zinc-900">
+            <div class="container">
+                <!--   Contact Title   -->
+                <div class="contact-content flex flex-col items-center mb-12">
+                    <h2 class="fade-in text-primary text-xl font-semibold mb-2">Contact Me</h2>
+                    <h3 class="fade-in text-4xl font-bold text-center">Get In Touch</h3>
+                    <div class="separator-5 mt-6 h-1 bg-primary"></div>
+                </div>
+                <!--   Contact Grid   -->
+                <div class="contact-grid grid grid-cols-3 gap-8">
+                    <!--  Column 1   -->
+                    <div class="space-y-6 col-span-1">
+                        <h4 class="text-2xl font-bold mb-4">Let's Talk</h4>
+                        <p class="dark text-muted-foreground">
+                            Feel free to reach out to me for any questions or
+                            opportunities. I'm always open to discussing new projects, creative ideas, or opportunities
+                            to be part of your vision.
+                        </p>
+                        <!--    Card   -->
+                        <div class="dark rounded-xl bg-card border border-zinc-700 shadow text-card-foreground">
+                            <!--  Card frame   -->
+                            <div class="p-6 space-y-4">
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-map-pin h-5 w-5 text-primary mt-0-5 mr-3">
+                                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium">Location:</h5>
+                                        <p class="dark text-muted-foreground">Estonia, TLN</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-mail h-5 w-5 text-primary mt-0-5 mr-3">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium">Email:</h5>
+                                        <p class="dark text-muted-foreground">dandrijenko@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="lucide lucide-phone h-5 w-5 text-primary mt-0-5 mr-3">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium">Phone:</h5>
+                                        <p class="dark text-muted-foreground">(+372) 537-911-25</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  Column 2   -->
+                    <div class="col-span-2">
+                        <!--   Card 2   -->
+                        <div class="dark rounded-xl bg-card border border-zinc-700 shadow text-card-foreground">
+                            <div class="p-6">
+                                <!--    Form email   -->
+                                <form id="form" class="space-y-4" name="form" novalidate>
+                                    <div class="form-input grid grid-cols-2 gap-4">
+                                        <!--  Column name   -->
+                                        <div class="space-y-2">
+                                            <label for="name" class="text-sm font-medium">Name</label>
+                                            <input id="name"
+                                                   class="dark w-full px-4 py-2 rounded-md border border-zinc-700 bg-transparent"
+                                                   type="text" minlength="2" placeholder="Your Name" name="name"
+                                                   required>
+                                            <p class="text-red-500 text-xs mt-1"></p>
+                                        </div>
+                                        <!--  Column email   -->
+                                        <div class="space-y-2">
+                                            <label for="email" class="text-sm font-medium">Email</label>
+                                            <input id="email"
+                                                   class="dark w-full px-4 py-2 rounded-md border border-zinc-700 bg-transparent"
+                                                   type="email" placeholder="Your Email" name="email" required>
+                                            <p class="text-red-500 text-xs mt-1"></p>
+                                        </div>
+                                    </div>
+                                    <!--  Row subject   -->
+                                    <div class="space-y-2">
+                                        <label for="subject" class="text-sm font-medium">Subject</label>
+                                        <input id="subject"
+                                               class="dark w-full px-4 py-2 rounded-md border border-zinc-700 bg-transparent"
+                                               type="text" minlength="3" placeholder="Subject" name="subject" required>
+                                        <p class="text-red-500 text-xs mt-1"></p>
+                                    </div>
+                                    <!--  Row Message   -->
+                                    <div class="space-y-2">
+                                        <label for="message" class="text-sm font-medium">Message</label>
+                                        <textarea id="message"
+                                                  class="dark w-full px-4 py-2 resize-none rounded-md border border-zinc-700 bg-transparent"
+                                                  minlength="10" maxlength="140"
+                                                  rows="5" placeholder="Your message" name="message"
+                                                  required></textarea>
+                                        <p class="text-red-500 text-xs mt-1"></p>
+                                    </div>
+                                    <!--  Button submit   -->
+                                    <button type="submit"
+                                            class="dark rounded-md whitespace-nowrap bg-primary text-primary-foreground font-medium text-sm inline-flex items-center justify-center gap-2 shadow h-9 px-4 py-2 w-auto transition-colors">
+                                        <span class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="lucide lucide-send mr-2 h-4 w-4"><path
+                                                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path
+                                                    d="m21.854 2.147-10.94 10.939"></path>
+                                            </svg>
+                                             <span>Send Message</span>
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-zinc-900-dark py-12 text-white">
+        <div class="container">
+            <!--   Footer Grid   -->
+            <div class="footer-grid grid grid-cols-4 gap-8">
+                <!--  Column 1   -->
+                <div class="col-span-1">
+                    <a class="text-xl font-bold tracking-tight" href="#">DevPortfolio</a>
+                    <p class="mt-4 text-zinc-400 text-sm">Building digital experiences with code and creativity.</p>
+                    <div class="flex items-center gap-4 mt-6">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                           class="text-zinc-400 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-github h-5 w-5">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                            <span class="sr-only">GitHub</span></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                           class="text-zinc-400 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span class="sr-only">LinkedIn</span></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                           class="text-zinc-400 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                            <span class="sr-only">Twitter</span></a>
+                    </div>
+                </div>
+                <!--  Column 2   -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <nav class="flex flex-col gap-2">
+                        <a class="text-zinc-400 transition" href="#home">Home</a>
+                        <a class="text-zinc-400 transition" href="#about">About</a>
+                        <a class="text-zinc-400 transition" href="#skills">Skills</a>
+                        <a class="text-zinc-400 transition" href="#projects">Projects</a>
+                        <a class="text-zinc-400 transition" href="#contact">Contact</a>
+                    </nav>
+                </div>
+                <!--  Column 3   -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2 text-zinc-400">
+                        <p>Estonia, TLN</p>
+                        <p>dandrijenko@gmail.com</p>
+                        <p>(+372) 537-911-25</p>
+                    </div>
+                </div>
+                <!--  Column 4   -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Let's Work Together</h3>
+                    <p class="text-zinc-400 text-sm mb-4">
+                        Have a project in mind? Let's collaborate and create something amazing.
+                    </p>
+                    <a href="#contact">
+                        <button class="dark inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-primary text-primary-foreground shadow h-9 px-4 py-2">
+                            Get In Touch
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!--    Line   -->
+            <div class="h-1px w-full my-8 bg-zinc-700"></div>
+            <!--    Footer   -->
+            <div class="footer__footer flex space-between items-center">
+                <p class="text-zinc-400 text-sm">© <!-- -->2025<!-- --> DevPortfolio. All rights reserved.</p>
+                <button id="to-top" class="dark inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors h-9 w-9 text-zinc-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-arrow-up h-5 w-5">
+                        <path d="m5 12 7-7 7 7"></path>
+                        <path d="M12 19V5"></path>
+                    </svg>
+                    <span class="sr-only">Back to top</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

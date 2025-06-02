@@ -1,0 +1,79 @@
+
+/* 1024 - 1199 */
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 1024px;
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+}
+/* 768 - 1023 */
+@media screen and (max-width: 1023px) {
+
+    .container {
+        max-width: 768px;
+    }
+
+    .hero-content div:first-child {
+        gap: 1rem;
+    }
+    .hero-main {
+        width: 70%
+    }
+    .photo {
+        width: 30%
+    }
+    .dev-img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .projects-grid, .frontend-grid, .tools-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .contact-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .col-span-2 {
+        grid-column: span 1 / span 1;
+    }
+
+}
+/* 425 - 767 */
+@media screen and (max-width: 767px) {
+
+    .container {
+        max-width: 425px;
+    }
+    .container.flex {
+        flex-wrap: wrap;
+    }
+    .nav-links {
+        gap: 0.5rem;
+    }
+    .hero-frame {
+        flex-direction: column;
+    }
+    .hero-main {
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+    }
+    .buttons-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .photo {
+        width: 100%;
+        order: -1;
+        margin-top: 2rem;
+    }
+    .about-more, .skill-grid, .projects-grid,.form-input {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4.5rem;
+    }
+}

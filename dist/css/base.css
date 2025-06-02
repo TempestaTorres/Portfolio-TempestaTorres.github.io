@@ -1,0 +1,37 @@
+html {
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button, input, textarea, select {
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+button {
+    cursor: pointer;
+}
+ul, ol {
+    display: flex;
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+svg {
+    display: block;
+    pointer-events: none;
+}
