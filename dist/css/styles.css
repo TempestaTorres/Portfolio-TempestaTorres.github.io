@@ -116,3 +116,13 @@ input:is(.dark):focus, textarea:is(.dark):focus {
 input:invalid:required, textarea:invalid:required {
     outline: 0.01rem solid rgb(239 68 68 / 1);
 }
+/*View More*/
+.view-more-wrapper {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+.view-more-wrapper.active {
+    opacity: 1;
+    height: auto;
+}

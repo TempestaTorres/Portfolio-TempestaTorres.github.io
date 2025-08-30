@@ -194,6 +194,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             e.stopPropagation();
         });
+        // View More
+        document.querySelector("#view-more").addEventListener('click', (e) => {
+            e.preventDefault();
+
+            let i = parseInt(e.target.dataset.nodeIndex, 10);
+            const moreWrappers = document.querySelectorAll('.view-more-wrapper');
+
+            if (moreWrappers && i < moreWrappers.length) {
+
+                moreWrappers[i].classList.add('active');
+                e.target.dataset.nodeIndex = `${i+1}`;
+            }
+
+        })
     }
     catch (e) {
         console.error(e);
