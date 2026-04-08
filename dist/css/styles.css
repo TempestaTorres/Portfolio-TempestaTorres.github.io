@@ -39,7 +39,12 @@ button:is(.white *):not(.slider-btn):hover {
     background-color: hsl(240 4.8% 95.9%);
     color: hsl(240 5.9% 10%);
 }
-
+.author-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
 /* Hero Section */
 .hero::before {
     content: '';
